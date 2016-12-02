@@ -114,7 +114,7 @@ class Ess_M2ePro_Model_PublicServices_Product_ObjectChange
         $stockItem->loadByProduct($product->getId())
                   ->setProductId($product->getId());
 
-        foreach ($product->getData('stock_item')->getData() as $key => $value) {
+        foreach ($product->getData('stock_item') as $key => $value) {
             $stockItem->setOrigData($key, $value);
         }
 
